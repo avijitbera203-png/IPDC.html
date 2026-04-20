@@ -6,6 +6,14 @@
 @font-face {
     font-family: "Metropolis";
     src: url(fonts/metropolis/Metropolis-SemiBold.otf) format(opentype);
+} 
+@font-face {
+    font-family: "Metropolis";
+    src: url(fonts/metropolis/Metropolis-Bold.otf) format(opentype);
+}
+@font-face {
+    font-family: "metropolis";
+    src: url(fonts/metropolis/Metropolis-Medium.otf) format(opentype);
 }
 body{
     font-family: "Metropolis";
@@ -22,10 +30,6 @@ body{
     --text-white:#FFFFFF;
     --text-para:#999999;
     --text-service:#363940;
-
-
-
-
 }
 *{
     margin: 0;
@@ -44,6 +48,7 @@ img{
 }
 figure{
     display: block;
+   
 }
 html{
     scroll-behavior: smooth;
@@ -53,14 +58,15 @@ html{
     flex-wrap: wrap;
     margin: 0 -15px;
 }
-.col35{
-    max-width: 35%;
-    flex: 0 0 35%;
+.col40{
+    max-width: 40%;
+    flex: 0 0 40%;
     padding: 0 15px;
 }
-.col65{
-    max-width: 65%;
-    flex: 0 0 65%;
+.col60{
+    max-width: 60%;
+    flex: 0 0 60%;
+    padding: 0 15px;
     position:relative;
 }
 .col25{
@@ -80,15 +86,14 @@ html{
     margin: 0 auto;
     padding: 0 15px;
 }
-/* .header{
-    padding: ;
-} */
+
 .header-logo{
     display: block;
     max-width: 175px;
 }
 .navbar{
     display: flex;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
     align-items: center;
 }
@@ -105,7 +110,8 @@ html{
 .navlinks li a{
     text-transform: uppercase;
     color:var(--text-black);
-    font-family: "Metropolis-semibold";
+    font-family: "Metropolis";
+    font-weight: 600;
     font-size: 12px;
     line-height: 1.66;
     letter-spacing: 2px;
@@ -127,7 +133,6 @@ html{
     background:var(--primary-pink);
     color: var(--text-white);
     font-size: 12px;
-    font-family: "Inter-regular";
     letter-spacing: 2px;
     line-height: 1.66;
     transition: 0.5s ease;
@@ -136,7 +141,7 @@ html{
 .cmn-btn:hover{
     background: black;
 }
-.col35 h1{
+.col40 h1{
     font-family: "Metropolis";
     font-weight: 900;
     font-size: 57px;
@@ -144,7 +149,7 @@ html{
     color: var(--text-black);
     margin-top: 111px;
 }
-.col35 p{
+.col40 p{
     margin: 40px 0;
     color: var(--text-tertiary);
     font-size: 16px;
@@ -211,15 +216,32 @@ html{
     color: var(--primary-pink);
 }
 .loan-logo{
-    position:absolute;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+    /* position: static; */
+    /* position:absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%; */
 }
+
+/* .car-logo a,
+.home-logo a {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 22px;
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+} */
 .car-logo a{
     position: absolute;
     top: 34px;
-    /* right: 74px; */
+    
     left: 78px;
     padding: 27px 34px;
     background-color: var(--text-white);
@@ -231,8 +253,9 @@ html{
     border-radius: 55px;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
     transition: 2s ease all;
-
 }
+
+
 .car-logo a i{
     color: var(--primary-pink);
 }
@@ -242,7 +265,7 @@ html{
    
 }
 .home-logo a{
-     position:absolute;
+    position:absolute;
     top: 145px;
     left: 610px;
     padding: 27px 34px;
@@ -338,7 +361,7 @@ h3, .h4-title{
     padding: 0 15px;
 }
 
-h2, .h3-title{
+.h3-title{
     text-align: center;
     color: var(--black-80);
     text-transform: capitalize;
@@ -355,11 +378,13 @@ h2, .h3-title{
 }
 
 .ser-card img{
-    max-width: 254px;
-    height: 365px;
+    max-width: 100%;
+    height: auto;
     position: relative;
-    /* column-gap: 116px;
-    */
+    column-gap: 116px;
+   
+
+   
 }
 .service-text{
     max-width: 254px;
@@ -401,7 +426,7 @@ h2, .h3-title{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 91px 0;
+    padding: 60px 0;
 }
 .result-card{
     max-width: 172px;
@@ -490,6 +515,16 @@ h2, .h3-title{
    
 }
 
+
+
+ 
+
+
+
+
+
+
+
 @media (max-width:1200px){
 
   .container{
@@ -514,13 +549,13 @@ h2, .h3-title{
 @media (max-width:992px){
 
   
-  .col35{
+  .col40{
     flex: 0 0 100%;
     max-width: 100%;
     text-align: center;
   }
 
-  .col65{
+  .col60{
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -558,9 +593,9 @@ h2, .h3-title{
 } 
 
 @media (max-width:576px){
-  /* columns full width */
-  .col35,
-  .col65,
+  
+  .col40,
+  .col60,
   .col25,
   
   .ser-card ,
@@ -569,7 +604,7 @@ h2, .h3-title{
     max-width: 100%;
   }
 
-  /* navbar */
+ 
   .navbar{
     flex-wrap: wrap;
   }
@@ -590,15 +625,15 @@ h2, .h3-title{
     padding: 10px 0; 
     
   }
-.cmn-btn{
+ .cmn-btn{
         padding: 12px 16px;  
-    font-size: 14px;    
-} 
-.Hero-btn1, .Hero-btn2{
+         font-size: 14px;    
+    } 
+ .Hero-btn1, .Hero-btn2{
      padding: 12px 18px; 
     font-size: 14px;
-}
-  /* banner */
+ }
+  
   .col35{
     margin: 40px 0;
     text-align: center;
